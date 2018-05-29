@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- https://developer.android.com/reference/android/support/constraint/ConstraintLayout#DimensionConstraints
+    
+    You can also define one dimension of a widget as a ratio of the other one. In order to do that, 
+    you need to have at least one constrained dimension be set to 0dp (i.e., MATCH_CONSTRAINT), 
+    and set the attribute layout_constraintDimensionRatio to a given ratio.
+    
+    The ratio can be expressed either as:
+    a float value, representing a ratio between width and height
+    a ratio in the form "width:height"
+    
+    -->
+    
+    <!-- You can also use ratio if both dimensions are set to MATCH_CONSTRAINT (0dp). In this case the 
+    system sets the largest dimensions the satisfies all constraints and maintains the aspect ratio
+    specified. -->
+
+    <!-- layout_width and layout_height are both 0dp, maintains 16:9 while filling to max screen width -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/orange"
+        android:gravity="center"
+        android:text="@string/ratio"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75"/>
+    
+    <!-- Draw a line against the horizontal guideline -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_guideline"
+        android:background="@color/black"/>
+    
+    <!-- Using decimal 1.333 to represent the ratio 4:3 (width:height).  
+         Also, only width is 0dp (match constraint).  If you're not planning to have it expand
+         as large as possible, it doesn't matter which dimension is set to 0dp.  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/green"
+        android:gravity="center"
+        android:text="@string/ratio"
+        app:layout_constraintDimensionRatio="1.333"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/vertical_guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- 
+    To constrain one specific side based on the dimensions of another, you can 
+    pre append W," or H, to constrain the width or height respectively. For example, 
+    If one dimension is constrained by two targets (e.g. width is 0dp and centered on parent) you 
+    can indicate which side should be constrained, by adding the letter W (for constraining 
+    the width) or H (for constraining the height) in front of the ratio, separated by a comma    -->
+
+    <!-- To see the difference, change the 'H' in layout_constraintDimensionRatio to 'W' 
+         or vice versa. -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="@string/ratio"
+        app:layout_constraintDimensionRatio="H, 4:3"
+        app:layout_constraintLeft_toRightOf="@+id/vertical_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_guideline"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

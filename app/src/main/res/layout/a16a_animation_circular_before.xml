@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/root_level"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ConstraintLayout files can be loaded into a ConstraintSet, then the TransitionManager
+         can be used to automatically animate between the current layout and the new layout.
+         All children of ConstraintLayout must have ids to use ConstraintSet.
+         See code in A16ConstraintSetAnimation to see how this works. -->
+
+    <TextView
+        android:id="@+id/constraint_set_instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/constraint_set_animation_instructions"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/center_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/btn_star"
+        android:tint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/out_star_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/btn_star"
+        android:tint="#FF0000"
+        app:layout_constraintCircle="@+id/center_button"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="@dimen/short_radius"/>
+
+    <ImageButton
+        android:id="@+id/out_star_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/btn_star"
+        android:tint="#FFA500"
+        app:layout_constraintCircle="@+id/center_button"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="@dimen/short_radius"/>
+
+    <ImageButton
+        android:id="@+id/out_star_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/btn_star"
+        android:tint="#FFFF00"
+        app:layout_constraintCircle="@+id/center_button"
+        app:layout_constraintCircleAngle="90"
+        app:layout_constraintCircleRadius="@dimen/short_radius"/>
+
+    <ImageButton
+        android:id="@+id/out_star_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/btn_star"
+        android:tint="#00FF00"
+        app:layout_constraintCircle="@+id/center_button"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="@dimen/short_radius"/>
+
+    <ImageButton
+        android:id="@+id/out_star_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/btn_star"
+        android:tint="#0000FF"
+        app:layout_constraintCircle="@+id/center_button"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="@dimen/short_radius"/>
+
+    <ImageButton
+        android:id="@+id/out_star_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/btn_star"
+        android:tint="#FF00FF"
+        app:layout_constraintCircle="@+id/center_button"
+        app:layout_constraintCircleAngle="225"
+        app:layout_constraintCircleRadius="@dimen/short_radius"/>
+
+    <ImageButton
+        android:id="@+id/out_star_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/btn_star"
+        android:tint="#551a8b"
+        app:layout_constraintCircle="@+id/center_button"
+        app:layout_constraintCircleAngle="270"
+        app:layout_constraintCircleRadius="@dimen/short_radius"/>
+
+    <ImageButton
+        android:id="@+id/out_star_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/btn_star"
+        android:tint="#8b4513"
+        app:layout_constraintCircle="@+id/center_button"
+        app:layout_constraintCircleAngle="315"
+        app:layout_constraintCircleRadius="@dimen/short_radius"/>
+
+</android.support.constraint.ConstraintLayout>

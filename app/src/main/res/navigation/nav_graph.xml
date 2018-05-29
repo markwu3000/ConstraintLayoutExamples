@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            app:startDestination="@id/constraintLayoutExamplesHomeFragment">
+
+    <fragment
+        android:id="@+id/constraintLayoutExamplesHomeFragment"
+        android:name="com.example.mwu3.constraintlayoutexamples.A00_ConstraintLayoutExamplesContents"
+        android:label="ConstraintLayoutExamplesHome">
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHome3_to_a01_RelativePositioning"
+            app:destination="@id/a01_RelativePositioning"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a02_MarginGone"
+            app:destination="@id/a02_MarginGone"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a03_Centering"
+            app:destination="@id/a03_Centering"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a04_HorizontalVerticalBias"
+            app:destination="@id/a04_HorizontalVerticalBias"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a05_AlignBaselineText"
+            app:destination="@id/a05_AlignBaselineText"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a06_CenterAlignItemsToEachOther"
+            app:destination="@id/a06_CenterAlignItemsToEachOther"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a07_CircularPositioning"
+            app:destination="@id/a07_CircularPositioning"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a08_DimensionConstraints"
+            app:destination="@id/a08_DimensionConstraints"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a09_HorizontalVerticalGuidelines"
+            app:destination="@id/a09_HorizontalVerticalGuidelines"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a10_MatchConstraints"
+            app:destination="@id/a10_MatchConstraints"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a11_PercentDimensions"
+            app:destination="@id/a11_PercentDimensions"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a12_Ratio"
+            app:destination="@id/a12_Ratio"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a13_Chains"
+            app:destination="@id/a13_Chains"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a14_Groups"
+            app:destination="@id/a14_Groups"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a15_Barriers"
+            app:destination="@id/a15_Barriers"/>
+        <action
+            android:id="@+id/action_constraintLayoutExamplesHomeFragment_to_a16_ConstraintSetAnimation"
+            app:destination="@id/a16_ConstraintSetAnimation"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/a01_RelativePositioning"
+        android:name="com.example.mwu3.constraintlayoutexamples.A01_RelativePositioning"
+        android:label="A01_RelativePositioning"/>
+
+    <fragment
+        android:id="@+id/a02_MarginGone"
+        android:name="com.example.mwu3.constraintlayoutexamples.A02_MarginGone"
+        android:label="A03_Centering"/>
+
+    <fragment
+        android:id="@+id/a03_Centering"
+        android:name="com.example.mwu3.constraintlayoutexamples.A03_Centering"
+        android:label="A03_Centering"/>
+
+    <fragment
+        android:id="@+id/a04_HorizontalVerticalBias"
+        android:name="com.example.mwu3.constraintlayoutexamples.A04_HorizontalVerticalBias"
+        android:label="A04_HorizontalVerticalBias"/>
+
+    <fragment
+        android:id="@+id/a05_AlignBaselineText"
+        android:name="com.example.mwu3.constraintlayoutexamples.A05_AlignBaselineText"
+        android:label="A05_AlignBaselineText"/>
+
+    <fragment
+        android:id="@+id/a06_CenterAlignItemsToEachOther"
+        android:name="com.example.mwu3.constraintlayoutexamples.A06_CenterAlignItemsToEachOther"
+        android:label="A06_CenterAlignItemsToEachOther"/>
+    
+    <fragment
+        android:id="@+id/a07_CircularPositioning"
+        android:name="com.example.mwu3.constraintlayoutexamples.A07_CircularPositioning"
+        android:label="A07_CircularPositioning"/>
+    
+    <fragment
+        android:id="@+id/a08_DimensionConstraints"
+        android:name="com.example.mwu3.constraintlayoutexamples.A08_DimensionConstraints"
+        android:label="A08_DimensionConstraints"/>
+    
+    <fragment
+        android:id="@+id/a09_HorizontalVerticalGuidelines"
+        android:name="com.example.mwu3.constraintlayoutexamples.A09_HorizontalVerticalGuidelines"
+        android:label="A09_HorizontalVerticalGuidelines"/>
+    
+    <fragment
+        android:id="@+id/a10_MatchConstraints"
+        android:name="com.example.mwu3.constraintlayoutexamples.A10_MatchConstraints"
+        android:label="A10_MatchConstraints"/>
+    
+    <fragment
+        android:id="@+id/a11_PercentDimensions"
+        android:name="com.example.mwu3.constraintlayoutexamples.A11_PercentDimensions"
+        android:label="A11_PercentDimensions"/>
+    
+    <fragment
+        android:id="@+id/a12_Ratio"
+        android:name="com.example.mwu3.constraintlayoutexamples.A12_Ratio"
+        android:label="A12_Ratio"/>
+    
+    <fragment
+        android:id="@+id/a13_Chains"
+        android:name="com.example.mwu3.constraintlayoutexamples.A13_Chains"
+        android:label="A13_Chains"/>
+    
+    <fragment
+        android:id="@+id/a14_Groups"
+        android:name="com.example.mwu3.constraintlayoutexamples.A14_Groups"
+        android:label="A14_Groups"/>
+    
+    <fragment
+        android:id="@+id/a15_Barriers"
+        android:name="com.example.mwu3.constraintlayoutexamples.A15_Barriers"
+        android:label="A15_Barriers"/>
+    
+    <fragment
+        android:id="@+id/a16_ConstraintSetAnimation"
+        android:name="com.example.mwu3.constraintlayoutexamples.A16_ConstraintSetAnimation"
+        android:label="A16_ConstraintSetAnimation"/>
+
+</navigation>

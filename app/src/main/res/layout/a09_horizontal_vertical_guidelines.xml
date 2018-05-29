@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <!-- https://developer.android.com/reference/android/support/constraint/Guideline -->
+    <!-- Guidelines are invisible horizontal or vertical lines that can be used as
+         constraint reference points. -->
+    
+    <!-- Horizontal Guideline -->
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25"/>
+    
+    <TextView
+        android:id="@+id/text1"
+        style="@style/big_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:text="@string/top"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline"/>
+
+    <TextView
+        android:id="@+id/text2"
+        style="@style/big_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:text="@string/bottom"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_guideline"/>
+
+
+    <!-- Vertical Guideline -->
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.73"/>
+
+    <TextView
+        android:id="@+id/text3"
+        style="@style/big_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:text="@string/left"
+        app:layout_constraintRight_toLeftOf="@+id/vertical_guideline"/>
+
+    <TextView
+        android:id="@+id/text4"
+        style="@style/big_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:text="@string/right"
+        app:layout_constraintLeft_toRightOf="@+id/vertical_guideline"/>
+
+</android.support.constraint.ConstraintLayout>

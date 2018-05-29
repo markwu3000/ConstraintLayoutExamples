@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ConstraintLayout Test</string>
+    <string name="my_music">Meine Musik</string>
+    <string name="feed">Futter</string>
+    <string name="profile">Profil</string>
+    <string name="settings">die Einstellungen</string>
+    <string name="get_premium">Premium bekommen</string>
+
+    <string name="random">Der schnelle braune Fuchs springt über den faulen Hund. Der schnelle braune Fuchs springt über den faulen Hund. Der schnelle braune Fuchs springt über den faulen Hund. Der schnelle braune Fuchs springt über den faulen Hund. Der schnelle braune Fuchs springt über den faulen Hund. Der schnelle braune Fuchs springt über den faulen Hund. Der schnelle braune Fuchs springt über den faulen Hund. Schreibmaschine.</string>
+
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- android:maxWidth, android:maxHeight, minWidth, minHeight 
+    https://developer.android.com/reference/android/support/constraint/ConstraintLayout#DimensionConstraints
+    Those minimum and maximum dimensions will be used by ConstraintLayout when its dimensions are set to WRAP_CONTENT.
+    If you use "match_parent", these do nothing.
+    -->
+
+    <TextView
+        android:id="@+id/regular_big_text"
+        style="@style/big_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:text="@string/text1"/>
+    
+    <TextView
+        android:id="@+id/big_text_with_small_max"
+        style="@style/big_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:text="@string/text1"
+        android:maxWidth="@dimen/tiny_text"
+        android:maxHeight="@dimen/tiny_text"
+        app:layout_constraintTop_toBottomOf="@+id/regular_big_text"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Green text uses same style/size as red text but has a very small maxWidth and maxHeight."
+        app:layout_constraintTop_toBottomOf="@+id/big_text_with_small_max"/>
+    
+    <!-- -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Orange text uses same style/size as Blue text but has a large minWidth and minHeight."
+        app:layout_constraintBottom_toTopOf="@+id/regular_small_text"/>
+
+    <TextView
+        android:id="@+id/regular_small_text"
+        style="@style/tiny_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:text="@string/text1"
+        app:layout_constraintBottom_toTopOf="@+id/small_text_with_big_min"/>
+
+    <TextView
+        android:id="@+id/small_text_with_big_min"
+        style="@style/tiny_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        android:text="@string/text1"
+        android:minWidth="200dp"
+        android:minHeight="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

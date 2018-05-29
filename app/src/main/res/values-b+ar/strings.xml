@@ -1,0 +1,38 @@
+<resources>
+    <string name="text1">Text 1</string>
+    <string name="text2">Text 2</string>
+    <string name="text3">Text 3</string>
+    <string name="center">Center</string>
+    <string name="right">Right</string>
+    <string name="left">Left</string>
+    <string name="top">Top</string>
+    <string name="bottom">Bottom</string>
+    <string name="name">Name</string>
+    <string name="ratio">ratio example 1</string>
+    
+    <string name="chain1_text">A</string>
+    <string name="chain2_text">B</string>
+    <string name="chain3_text">C</string>
+    <string name="chain4_text">D</string>
+    <string name="chain5_text">E</string>
+
+    
+    <string name="chain">Chain</string>
+    <string name="chain_spread">Spread Chain</string>
+    <string name="chain_spread_inside">Spread Chain Inside</string>
+    <string name="weighted_chain">Weighted Chain</string>
+    <string name="packed_chain">Packed Chain</string>
+    <string name="packed_chain_bias">Packed Chain with Bias</string>
+
+    <string name="winner">World Snail Racing Champion </string>
+
+    <string name="app_name">ConstraintLayout Test</string>
+    <string name="my_music">My Music</string>
+    <string name="feed">Feed</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="get_premium">Get Premium</string>
+
+    <string name="random">The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  Typewriter.</string>
+
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="short_radius">100dp</dimen>
+    <dimen name="long_radius">200dp</dimen>
+    <dimen name="medium_dimension">150</dimen>
+
+    <dimen name="big_left_margin">150dp</dimen>
+    <dimen name="small_left_margin">25dp</dimen>
+
+    <dimen name="top_margin">40dp</dimen>
+    <dimen name="star_size_small">35dp</dimen>
+
+    <dimen name="tiny_text">12sp</dimen>
+    <dimen name="small_text">16sp</dimen>
+    <dimen name="medium_text">21sp</dimen>
+    <dimen name="big_text">35sp</dimen>
+    <dimen name="shadow_size">5</dimen>
+    <dimen name="shadow_radius">5</dimen>
+    <dimen name="content_item_top_margin">10dp</dimen>
+    
+    <dimen name="chain_square_size">50dp</dimen>
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded">
+    
+    <!-- https://developer.android.com/reference/android/support/constraint/ConstraintLayout
+    
+     Relative positioning is one of the basic building block of creating layouts in ConstraintLayout.
+     Those constraints allow you to position a given widget relative to another one. You can 
+     constrain a widget on the horizontal and vertical axis:
+
+     Horizontal Axis: left, right, start and end sides
+     Vertical Axis: top, bottom sides and text baseline
+
+     The general concept is to constrain a given side of a widget to another side of any other widget. 
+     
+     Here is the list of available constraints (Fig. 2):
+
+    layout_constraintLeft_toLeftOf
+    layout_constraintLeft_toRightOf
+    layout_constraintRight_toLeftOf
+    layout_constraintRight_toRightOf
+    layout_constraintTop_toTopOf
+    layout_constraintTop_toBottomOf
+    layout_constraintBottom_toTopOf
+    layout_constraintBottom_toBottomOf
+    layout_constraintBaseline_toBaselineOf
+    layout_constraintStart_toEndOf
+    layout_constraintStart_toStartOf
+    layout_constraintEnd_toStartOf
+    layout_constraintEnd_toEndOf
+
+    They all take a reference id to another widget, or the parent (which will reference the
+    parent container, i.e. the ConstraintLayout). -->
+    
+    <!-- Each View needs a horizontal and vertical constraint.  If you don't have a horizontal
+    constraint, the view will snap to the left.  If you don't have a vertical constraint,
+    the view will snap to the top. 
+    
+    If you don't need to worry about "Right to Left" Languages and settings, you can use the 
+    left/right constraints.  Otherwise, use the start/end versions.  To suppress the warnings
+    that you'll get from using the "right/left" versions, use: tools:ignore="RtlHardcoded" 
+    -->
+
+    <TextView
+        android:id="@+id/text_left"
+        style="@style/big_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_left_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:background="@color/red"
+        android:text="@string/left"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- The left edge of text_center is connected to the right edge of text_left.
+         The top edge of text_center is vertically aligned to the top edge of text_left -->
+    <TextView
+        android:id="@+id/text_center"
+        style="@style/big_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_left_margin"
+        android:background="@color/green"
+        android:text="@string/center"
+        app:layout_constraintLeft_toRightOf="@+id/text_left"
+        app:layout_constraintTop_toTopOf="@+id/text_left"/>
+
+    <!-- The top edge of text_bottom is connected to the bottom edge of text_center.
+         The left edge of text_bottom is aligned with the left edge of text_center. -->
+    <TextView
+        android:id="@+id/text_bottom"
+        style="@style/big_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin"
+        android:background="@color/blue"
+        android:text="@string/bottom"
+        app:layout_constraintLeft_toLeftOf="@+id/text_center"
+        app:layout_constraintTop_toBottomOf="@+id/text_center"/>
+
+</android.support.constraint.ConstraintLayout>

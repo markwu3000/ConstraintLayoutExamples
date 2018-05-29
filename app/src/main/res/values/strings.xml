@@ -1,0 +1,58 @@
+<resources>
+    <string name="text1">Text 1</string>
+    <string name="text2">Text 2</string>
+    <string name="text3">Text 3</string>
+    <string name="center">Center</string>
+    <string name="right">Right</string>
+    <string name="left">Left</string>
+    <string name="top">Top</string>
+    <string name="bottom">Bottom</string>
+    <string name="name">Name</string>
+    <string name="ratio">ratio example 1</string>
+
+    <string name="chain1_text">A</string>
+    <string name="chain2_text">B</string>
+    <string name="chain3_text">C</string>
+    <string name="chain4_text">D</string>
+    <string name="chain5_text">E</string>
+
+
+    <string name="chain">Chain</string>
+    <string name="chain_spread">Spread Chain</string>
+    <string name="chain_spread_inside">Spread Chain Inside</string>
+    <string name="weighted_chain">Weighted Chain</string>
+    <string name="packed_chain">Packed Chain</string>
+    <string name="packed_chain_bias">Packed Chain with Bias</string>
+
+    <string name="winner">World Snail Racing Champion </string>
+
+    <string name="app_name">ConstraintLayout Examples 1 &#8211; 16</string>
+    <string name="my_music">My Music</string>
+    <string name="feed">Feed</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="get_premium">Get Premium</string>
+
+    <string name="random">The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  Typewriter.</string>
+
+    <string name="constraint_layout_home_text">Constraint Layout Examples</string>
+    <string name="a01">01 - Relative Positioning</string>
+    <string name="a02">02 - Margin Gone</string>
+    <string name="a03">03 - Centering Views</string>
+    <string name="a04">04 - Horizontal and Vertical Bias</string>
+    <string name="a05">05 - Aligning Text to Baseline</string>
+    <string name="a06">06 - Center Align Items to Each Other</string>
+    <string name="a07">07 - Circular Positioning</string>
+    <string name="a08">08 - Dimension Constraints</string>
+    <string name="a09">09 - Horizontal and Vertical Guidelines</string>
+    <string name="a10">10 - Match Constraints</string>
+    <string name="a11">11 - Percent Dimensions</string>
+    <string name="a12">12 - View Ratios</string>
+    <string name="a13">13 - Chains</string>
+    <string name="a14">14 - Groups</string>
+    <string name="a15">15 - Barriers</string>
+    <string name="a16">16 - Constraint Set Animation</string>
+
+    <string name="constraint_set_animation_instructions">Press the Black Star</string>
+    <string name="contents_instructions">Constraint Set Animation is the only one that needs to be run to see it in action.  The rest of the layouts can just be viewed in the xml editor with the \"Preview\" pane open.  Each numbered item below can be clicked to show the example.</string>
+</resources>

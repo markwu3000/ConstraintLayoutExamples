@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <!-- Contents page for all the examples.  #16 is the only one that needs to be run to see it
+         in action.  The rest of the layouts can just be viewed in the xml editor with the "Preview"
+         pane open. -->
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_instructions"
+                style="@style/small_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contents_instructions"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_a01"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a01"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_instructions"/>
+
+            <TextView
+                android:id="@+id/tv_a02"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a02"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a01"/>
+
+            <TextView
+                android:id="@+id/tv_a03"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a03"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a02"/>
+
+            <TextView
+                android:id="@+id/tv_a04"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a04"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a03"/>
+
+            <TextView
+                android:id="@+id/tv_a05"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a05"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a04"/>
+
+            <TextView
+                android:id="@+id/tv_a06"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a06"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a05"/>
+
+            <TextView
+                android:id="@+id/tv_a07"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a07"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a06"/>
+
+            <TextView
+                android:id="@+id/tv_a08"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a08"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a07"/>
+
+            <TextView
+                android:id="@+id/tv_a09"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a09"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a08"/>
+
+            <TextView
+                android:id="@+id/tv_a10"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a10"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a09"/>
+
+            <TextView
+                android:id="@+id/tv_a11"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a11"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a10"/>
+
+            <TextView
+                android:id="@+id/tv_a12"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a12"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a11"/>
+
+            <TextView
+                android:id="@+id/tv_a13"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a13"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a12"/>
+
+            <TextView
+                android:id="@+id/tv_a14"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a13"/>
+
+            <TextView
+                android:id="@+id/tv_a15"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a14"/>
+
+            <TextView
+                android:id="@+id/tv_a16"
+                style="@style/contents_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_a15"/>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
