@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
+
     <!-- Groups are new to 1.1 -->
 
     <ImageView
@@ -16,7 +15,7 @@
         android:tint="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="25"/>
+        app:layout_constraintVertical_bias="25" />
 
     <TextView
         android:id="@+id/profile_text"
@@ -25,15 +24,15 @@
         android:text="@string/profile"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/star_image"/>
+        app:layout_constraintTop_toBottomOf="@id/star_image" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/my_constraint_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"
-        app:constraint_referenced_ids="star_image, profile_text"/>
-    
+        app:constraint_referenced_ids="star_image, profile_text" />
+
     <!-- Change the visibility of all items in the group at once (visible, invisible, gone) 
          Can be done programmatically as well. Put all the IDs in "app:constraint_referenced_ids" -->
 
@@ -43,7 +42,7 @@
         android:background="#FEFEFE"
         android:text="@string/random"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_text"
-        tools:text="@string/random"/>
+        app:layout_constraintTop_toBottomOf="@id/profile_text"
+        tools:text="@string/random" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

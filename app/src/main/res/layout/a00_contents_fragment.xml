@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -25,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/contents_instructions"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_a01"
@@ -34,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a01"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_instructions"/>
+                app:layout_constraintTop_toBottomOf="@+id/tv_instructions" />
 
             <TextView
                 android:id="@+id/tv_a02"
@@ -43,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a02"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a01"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a01" />
 
             <TextView
                 android:id="@+id/tv_a03"
@@ -52,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a03"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a02"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a02" />
 
             <TextView
                 android:id="@+id/tv_a04"
@@ -61,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a04"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a03"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a03" />
 
             <TextView
                 android:id="@+id/tv_a05"
@@ -70,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a05"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a04"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a04" />
 
             <TextView
                 android:id="@+id/tv_a06"
@@ -79,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a06"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a05"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a05" />
 
             <TextView
                 android:id="@+id/tv_a07"
@@ -88,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a07"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a06"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a06" />
 
             <TextView
                 android:id="@+id/tv_a08"
@@ -97,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a08"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a07"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a07" />
 
             <TextView
                 android:id="@+id/tv_a09"
@@ -106,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a09"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a08"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a08" />
 
             <TextView
                 android:id="@+id/tv_a10"
@@ -115,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a10"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a09"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a09" />
 
             <TextView
                 android:id="@+id/tv_a11"
@@ -124,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a11"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a10"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a10" />
 
             <TextView
                 android:id="@+id/tv_a12"
@@ -133,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a12"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a11"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a11" />
 
             <TextView
                 android:id="@+id/tv_a13"
@@ -142,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a13"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a12"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a12" />
 
             <TextView
                 android:id="@+id/tv_a14"
@@ -151,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a14"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a13"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a13" />
 
             <TextView
                 android:id="@+id/tv_a15"
@@ -160,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a15"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a14"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a14" />
 
             <TextView
                 android:id="@+id/tv_a16"
@@ -169,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a16"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_a15"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_a15" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

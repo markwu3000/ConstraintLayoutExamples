@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,7 +17,8 @@
         android:background="@color/red"
         android:text="@string/text1"
         android:visibility="visible"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_2"
@@ -28,7 +28,8 @@
         android:layout_marginLeft="@dimen/small_left_margin"
         android:background="@color/blue"
         android:text="@string/text2"
-        app:layout_constraintLeft_toRightOf="@+id/text_1"
-        app:layout_goneMarginLeft="@dimen/big_left_margin"/>
+        app:layout_constraintLeft_toRightOf="@id/text_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginLeft="@dimen/big_left_margin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

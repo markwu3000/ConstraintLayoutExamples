@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,7 +19,7 @@
         android:background="@color/red"
         android:text="@string/text1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent" />
 
     <!-- ************************************************************************************** -->
 
@@ -35,7 +34,7 @@
         android:text="@string/text2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regular_big_text"/>
+        app:layout_constraintTop_toBottomOf="@id/regular_big_text" />
 
     <!-- ************************************************************************************** -->
 
@@ -45,13 +44,13 @@
         style="@style/big_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_left_margin"
         android:layout_marginTop="@dimen/top_margin"
         android:background="@color/purple"
         android:text="@string/text3"
-        android:layout_marginLeft="@dimen/small_left_margin"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/big_text_with_small_max"/>
+        app:layout_constraintTop_toBottomOf="@id/big_text_with_small_max" />
 
     <!-- ************************************************************************************** -->
 
@@ -62,8 +61,8 @@
         android:layout_height="wrap_content"
         android:background="@color/blue"
         android:text="@string/name"
-        app:layout_constraintBottom_toBottomOf="@+id/name_edit_text"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@id/name_edit_text"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <!-- Use 0dp as "match constraint" to fill the remaining space. -->
     <EditText
@@ -71,18 +70,18 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/top_margin"
-        app:layout_constraintLeft_toRightOf="@+id/name_text_view"
-        app:layout_constraintRight_toLeftOf="@+id/search_button"
-        app:layout_constraintTop_toBottomOf="@+id/text3"/>
+        app:layout_constraintLeft_toRightOf="@id/name_text_view"
+        app:layout_constraintRight_toLeftOf="@id/search_button"
+        app:layout_constraintTop_toBottomOf="@id/text3" />
 
     <ImageView
         android:id="@+id/search_button"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:src="@android:drawable/ic_search_category_default"
-        app:layout_constraintTop_toTopOf="@+id/name_edit_text"
-        app:layout_constraintBottom_toBottomOf="@+id/name_text_view"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@id/name_text_view"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/name_edit_text" />
 
     <!-- ************************************************************************************** -->
 
@@ -90,13 +89,13 @@
         android:id="@+id/left_star"
         android:layout_width="@dimen/star_size_small"
         android:layout_height="@dimen/star_size_small"
+        android:layout_marginTop="@dimen/top_margin"
         android:background="@color/black"
         android:src="@android:drawable/star_on"
-        android:layout_marginTop="@dimen/top_margin"
         android:tint="@color/yellow"
-        app:layout_constraintRight_toLeftOf="@+id/center_text"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_edit_text"/>
+        app:layout_constraintRight_toLeftOf="@id/center_text"
+        app:layout_constraintTop_toBottomOf="@id/name_edit_text" />
 
     <!-- Match both horizontal and vertical constraints.  Top and Bottom are constrained to the star. -->
     <TextView
@@ -106,10 +105,10 @@
         android:background="@color/orange"
         android:gravity="center"
         android:text="@string/winner"
-        app:layout_constraintLeft_toRightOf="@+id/left_star"
-        app:layout_constraintRight_toLeftOf="@+id/right_star"
-        app:layout_constraintTop_toTopOf="@+id/left_star"
-        app:layout_constraintBottom_toBottomOf="@+id/left_star"/>
+        app:layout_constraintBottom_toBottomOf="@id/left_star"
+        app:layout_constraintLeft_toRightOf="@id/left_star"
+        app:layout_constraintRight_toLeftOf="@id/right_star"
+        app:layout_constraintTop_toTopOf="@id/left_star" />
 
     <ImageView
         android:id="@+id/right_star"
@@ -118,9 +117,9 @@
         android:background="@color/black"
         android:src="@android:drawable/star_on"
         android:tint="@color/yellow"
-        app:layout_constraintLeft_toRightOf="@+id/center_text"
-        app:layout_constraintBottom_toBottomOf="@+id/left_star"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@id/left_star"
+        app:layout_constraintLeft_toRightOf="@id/center_text"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,7 +11,6 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
 
             <!-- A set of widgets are considered a chain if they are linked together via a bi-directional connection.
                  Chains are controlled by attributes set on the first element of the chain (the "head" of the chain). -->
@@ -29,7 +26,7 @@
                 android:textColor="@color/black"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <!-- This text view is the (horizontal) chain head... set the chainStyle here.  
                  values: packed, spread, spread_inside 
@@ -44,7 +41,7 @@
                 app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@+id/text_1_2"
-                app:layout_constraintTop_toBottomOf="@+id/chain_spread_text"/>
+                app:layout_constraintTop_toBottomOf="@+id/chain_spread_text" />
 
             <ImageView
                 android:id="@+id/text_1_2"
@@ -54,7 +51,7 @@
                 android:src="@drawable/buttercup"
                 app:layout_constraintBottom_toBottomOf="@+id/text_1_1"
                 app:layout_constraintLeft_toRightOf="@+id/text_1_1"
-                app:layout_constraintRight_toLeftOf="@+id/text_1_3"/>
+                app:layout_constraintRight_toLeftOf="@+id/text_1_3" />
 
             <ImageView
                 android:id="@+id/text_1_3"
@@ -64,7 +61,7 @@
                 android:src="@drawable/bubbles"
                 app:layout_constraintBottom_toBottomOf="@+id/text_1_1"
                 app:layout_constraintLeft_toRightOf="@+id/text_1_2"
-                app:layout_constraintRight_toRightOf="parent"/>
+                app:layout_constraintRight_toRightOf="parent" />
 
             <!-- ***** Spread Chain Inside ************************************************************ -->
 
@@ -78,7 +75,7 @@
                 android:textColor="@color/black"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_1_1"/>
+                app:layout_constraintTop_toBottomOf="@+id/text_1_1" />
 
             <!-- This text view is the (horizontal) chain head... set the chainStyle here.  
              values: packed, spread, spread_inside -->
@@ -92,7 +89,7 @@
                 app:layout_constraintHorizontal_chainStyle="spread_inside"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@+id/text_2_2"
-                app:layout_constraintTop_toBottomOf="@+id/chain_spread_inside_text"/>
+                app:layout_constraintTop_toBottomOf="@+id/chain_spread_inside_text" />
 
             <!-- The left edge of text_center is connected to the right edge of text_left -->
             <ImageView
@@ -103,7 +100,7 @@
                 android:src="@drawable/buttercup"
                 app:layout_constraintBottom_toBottomOf="@+id/text_2_1"
                 app:layout_constraintLeft_toRightOf="@+id/text_2_1"
-                app:layout_constraintRight_toLeftOf="@+id/text_2_3"/>
+                app:layout_constraintRight_toLeftOf="@+id/text_2_3" />
 
             <!-- The left edge of text_right is connected to the right edge of text_center -->
             <ImageView
@@ -114,7 +111,7 @@
                 android:src="@drawable/bubbles"
                 app:layout_constraintBottom_toBottomOf="@+id/text_2_1"
                 app:layout_constraintLeft_toRightOf="@+id/text_2_2"
-                app:layout_constraintRight_toLeftOf="@+id/text_2_4"/>
+                app:layout_constraintRight_toLeftOf="@+id/text_2_4" />
 
             <ImageView
                 android:id="@+id/text_2_4"
@@ -126,7 +123,7 @@
 
                 app:layout_constraintBottom_toBottomOf="@+id/text_2_1"
                 app:layout_constraintLeft_toRightOf="@+id/text_2_3"
-                app:layout_constraintRight_toRightOf="parent"/>
+                app:layout_constraintRight_toRightOf="parent" />
 
             <!-- ***** Weighted Chain ***************************************************************** -->
 
@@ -140,7 +137,7 @@
                 android:textColor="@color/black"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_2_1"/>
+                app:layout_constraintTop_toBottomOf="@+id/text_2_1" />
 
             <!-- This text view is the (horizontal) chain head... set the chainStyle here.  
              values: packed, spread, spread_inside -->
@@ -154,7 +151,7 @@
                 app:layout_constraintHorizontal_weight="3"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@+id/text_3_2"
-                app:layout_constraintTop_toBottomOf="@+id/chain_weighted_text"/>
+                app:layout_constraintTop_toBottomOf="@+id/chain_weighted_text" />
 
             <!-- The left edge of text_center is connected to the right edge of text_left -->
             <ImageView
@@ -166,7 +163,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/text_3_1"
                 app:layout_constraintHorizontal_weight="2"
                 app:layout_constraintLeft_toRightOf="@+id/text_3_1"
-                app:layout_constraintRight_toLeftOf="@+id/text_3_3"/>
+                app:layout_constraintRight_toLeftOf="@+id/text_3_3" />
 
             <!-- The left edge of text_right is connected to the right edge of text_center -->
             <ImageView
@@ -178,7 +175,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/text_3_1"
                 app:layout_constraintHorizontal_weight="1"
                 app:layout_constraintLeft_toRightOf="@+id/text_3_2"
-                app:layout_constraintRight_toRightOf="parent"/>
+                app:layout_constraintRight_toRightOf="parent" />
 
             <!-- ***** Packed Chain ******************************************************************* -->
 
@@ -192,7 +189,7 @@
                 android:textColor="@color/black"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_3_1"/>
+                app:layout_constraintTop_toBottomOf="@+id/text_3_1" />
 
             <!-- This text view is the (horizontal) chain head... set the chainStyle here.  
              values: packed, spread, spread_inside -->
@@ -205,7 +202,7 @@
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@+id/text_4_2"
-                app:layout_constraintTop_toBottomOf="@+id/chain_packed"/>
+                app:layout_constraintTop_toBottomOf="@+id/chain_packed" />
 
             <!-- The left edge of text_center is connected to the right edge of text_left -->
             <ImageView
@@ -216,7 +213,7 @@
                 android:src="@drawable/buttercup"
                 app:layout_constraintBottom_toBottomOf="@+id/text_4_1"
                 app:layout_constraintLeft_toRightOf="@+id/text_4_1"
-                app:layout_constraintRight_toLeftOf="@+id/text_4_3"/>
+                app:layout_constraintRight_toLeftOf="@+id/text_4_3" />
 
             <!-- The left edge of text_right is connected to the right edge of text_center -->
             <ImageView
@@ -227,7 +224,7 @@
                 android:src="@drawable/bubbles"
                 app:layout_constraintBottom_toBottomOf="@+id/text_4_1"
                 app:layout_constraintLeft_toRightOf="@+id/text_4_2"
-                app:layout_constraintRight_toRightOf="parent"/>
+                app:layout_constraintRight_toRightOf="parent" />
 
             <!-- ***** Packed Chain with Bias ********************************************************* -->
 
@@ -241,7 +238,7 @@
                 android:textColor="@color/black"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_4_1"/>
+                app:layout_constraintTop_toBottomOf="@+id/text_4_1" />
 
             <!-- Set the layout_constraintHorizontal_bias on the chain head. -->
             <ImageView
@@ -254,7 +251,7 @@
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@+id/text_5_2"
-                app:layout_constraintTop_toBottomOf="@+id/chain_packed_bias"/>
+                app:layout_constraintTop_toBottomOf="@+id/chain_packed_bias" />
 
             <!-- The left edge of text_center is connected to the right edge of text_left -->
             <ImageView
@@ -265,7 +262,7 @@
                 android:src="@drawable/buttercup"
                 app:layout_constraintBottom_toBottomOf="@+id/text_5_1"
                 app:layout_constraintLeft_toRightOf="@+id/text_5_1"
-                app:layout_constraintRight_toLeftOf="@+id/text_5_3"/>
+                app:layout_constraintRight_toLeftOf="@+id/text_5_3" />
 
             <!-- The left edge of text_right is connected to the right edge of text_center -->
             <ImageView
@@ -276,7 +273,7 @@
                 android:src="@drawable/bubbles"
                 app:layout_constraintBottom_toBottomOf="@+id/text_5_1"
                 app:layout_constraintLeft_toRightOf="@+id/text_5_2"
-                app:layout_constraintRight_toRightOf="parent"/>
+                app:layout_constraintRight_toRightOf="parent" />
             <!-- ************************************************************************************** -->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
