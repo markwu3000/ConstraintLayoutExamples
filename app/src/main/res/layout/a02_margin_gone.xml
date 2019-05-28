@@ -6,18 +6,19 @@
     android:layout_height="match_parent"
     tools:ignore="RtlHardcoded">
 
-    <!-- Change the visibility of text_1 from visible to gone.  
-         text_2 will use the layout_goneMarginLeft as the left margin isntead of layout_marginLeft -->
+    <!-- text_2 has a left margin of 25dp.  Change the visibility of text_1 from visible to gone.
+         text_2 will use the layout_goneMarginLeft (0dp) as the left margin instead of layout_marginLeft (25dp) -->
+
     <TextView
         android:id="@+id/text_1"
         style="@style/big_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/big_left_margin"
-        android:background="@color/red"
+        android:background="@color/pink800"
         android:text="@string/text1"
         android:visibility="visible"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -25,11 +26,11 @@
         style="@style/big_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/small_left_margin"
-        android:background="@color/blue"
+        android:layout_marginLeft="25dp"
+        android:background="@color/blue800"
         android:text="@string/text2"
-        app:layout_constraintLeft_toRightOf="@id/text_1"
+        app:layout_constraintStart_toEndOf="@id/text_1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_goneMarginLeft="@dimen/big_left_margin" />
+        app:layout_goneMarginLeft="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

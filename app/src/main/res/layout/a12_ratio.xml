@@ -28,8 +28,8 @@
         android:gravity="center"
         android:text="@string/ratio"
         app:layout_constraintDimensionRatio="16:9"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -53,6 +53,8 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/horizontal_guideline" />
 
     <!-- Using decimal 1.333 to represent the ratio 4:3 (width:height).  
@@ -61,18 +63,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:background="@color/green"
+        android:background="@color/green800"
         android:gravity="center"
         android:text="@string/ratio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1.333"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/horizontal_guideline" />
 
     <!-- 
     To constrain one specific side based on the dimensions of another, you can 
-    pre append W," or H, to constrain the width or height respectively. For example, 
+    pre append W or H to constrain the width or height respectively. For example,
     If one dimension is constrained by two targets (e.g. width is 0dp and centered on parent) you 
     can indicate which side should be constrained, by adding the letter W (for constraining 
     the width) or H (for constraining the height) in front of the ratio, separated by a comma    -->
@@ -82,14 +84,13 @@
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/blue"
+        android:background="@color/blue800"
         android:gravity="center"
         android:text="@string/ratio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="H, 4:3"
-        app:layout_constraintLeft_toRightOf="@id/vertical_guideline"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"
         app:layout_constraintTop_toBottomOf="@id/horizontal_guideline" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

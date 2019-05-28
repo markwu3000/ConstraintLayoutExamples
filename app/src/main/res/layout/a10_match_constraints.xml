@@ -16,10 +16,11 @@
         style="@style/big_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/red"
+        android:background="@color/pink800"
         android:text="@string/text1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- ************************************************************************************** -->
 
@@ -30,10 +31,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/top_margin"
-        android:background="@color/green"
+        android:background="@color/green800"
+        android:gravity="center"
         android:text="@string/text2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/regular_big_text" />
 
     <!-- ************************************************************************************** -->
@@ -44,12 +46,13 @@
         style="@style/big_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_left_margin"
         android:layout_marginLeft="@dimen/small_left_margin"
         android:layout_marginTop="@dimen/top_margin"
         android:background="@color/purple"
         android:text="@string/text3"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/big_text_with_small_max" />
 
     <!-- ************************************************************************************** -->
@@ -59,10 +62,10 @@
         style="@style/big_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/blue"
+        android:background="@color/blue800"
         android:text="@string/name"
         app:layout_constraintBottom_toBottomOf="@id/name_edit_text"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Use 0dp as "match constraint" to fill the remaining space. -->
     <EditText
@@ -70,8 +73,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/top_margin"
-        app:layout_constraintLeft_toRightOf="@id/name_text_view"
-        app:layout_constraintRight_toLeftOf="@id/search_button"
+        app:layout_constraintEnd_toStartOf="@id/search_button"
+        app:layout_constraintStart_toEndOf="@id/name_text_view"
         app:layout_constraintTop_toBottomOf="@id/text3" />
 
     <ImageView
@@ -80,7 +83,7 @@
         android:layout_height="0dp"
         android:src="@android:drawable/ic_search_category_default"
         app:layout_constraintBottom_toBottomOf="@id/name_text_view"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/name_edit_text" />
 
     <!-- ************************************************************************************** -->
@@ -93,8 +96,8 @@
         android:background="@color/black"
         android:src="@android:drawable/star_on"
         android:tint="@color/yellow"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/center_text"
+        app:layout_constraintEnd_toStartOf="@id/center_text"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/name_edit_text" />
 
     <!-- Match both horizontal and vertical constraints.  Top and Bottom are constrained to the star. -->
@@ -103,11 +106,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/orange"
+        android:ellipsize="end"
         android:gravity="center"
+        android:maxLines="1"
         android:text="@string/winner"
         app:layout_constraintBottom_toBottomOf="@id/left_star"
-        app:layout_constraintLeft_toRightOf="@id/left_star"
-        app:layout_constraintRight_toLeftOf="@id/right_star"
+        app:layout_constraintEnd_toStartOf="@id/right_star"
+        app:layout_constraintStart_toEndOf="@id/left_star"
         app:layout_constraintTop_toTopOf="@id/left_star" />
 
     <ImageView
@@ -118,8 +123,50 @@
         android:src="@android:drawable/star_on"
         android:tint="@color/yellow"
         app:layout_constraintBottom_toBottomOf="@id/left_star"
-        app:layout_constraintLeft_toRightOf="@id/center_text"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/center_text" />
+
+    <!-- ************************************************************************************** -->
+
+    <!--
+        ConstrainedWidth Example
+
+        Variable length text view on the left.  Button (or other view) on the right.  If the text is short, the right view
+        should be packed next to it.  If the text is long, the button should still be next to the next view and not
+        get pushed off the screen.  To prevent getting pushed off the screen, set `app:layout_constrainedWidth="true"`
+        on the textview.  This is new to ConstraintLayout 1.1 and replaces layout_constraintWidth_default.
+        https://androidstudio.googleblog.com/2017/10/constraintlayout-110-beta-2.html
+
+        Make the text really long (see button stays on screen.)
+        remove app:layout_constrainedWidth="true" (see button gets pushed off screen.)
+    -->
+
+    <TextView
+        android:id="@+id/constrained_width_text"
+        style="@style/big_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin"
+        android:background="@color/yellow"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="ABC"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintEnd_toStartOf="@id/right_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/center_text" />
+
+    <Button
+        android:id="@+id/right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button"
+        app:layout_constraintBottom_toBottomOf="@id/constrained_width_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/constrained_width_text"
+        app:layout_constraintTop_toTopOf="@id/constrained_width_text" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

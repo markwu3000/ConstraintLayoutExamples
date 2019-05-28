@@ -16,6 +16,7 @@
     <string name="chain4_text">D</string>
     <string name="chain5_text">E</string>
 
+    <string name="bias_example">Bias</string>
 
     <string name="chain">Chain</string>
     <string name="chain_spread">Spread Chain</string>
@@ -36,22 +37,22 @@
     <string name="random">The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.  Typewriter.</string>
 
     <string name="constraint_layout_home_text">Constraint Layout Examples</string>
-    <string name="a01">01 - Relative Positioning</string>
-    <string name="a02">02 - Margin Gone</string>
-    <string name="a03">03 - Centering Views</string>
-    <string name="a04">04 - Horizontal and Vertical Bias</string>
-    <string name="a05">05 - Aligning Text to Baseline</string>
-    <string name="a06">06 - Center Align Items to Each Other</string>
-    <string name="a07">07 - Circular Positioning</string>
-    <string name="a08">08 - Dimension Constraints</string>
-    <string name="a09">09 - Horizontal and Vertical Guidelines</string>
-    <string name="a10">10 - Match Constraints</string>
-    <string name="a11">11 - Percent Dimensions</string>
-    <string name="a12">12 - View Ratios</string>
-    <string name="a13">13 - Chains</string>
-    <string name="a14">14 - Groups</string>
-    <string name="a15">15 - Barriers</string>
-    <string name="a16">16 - Constraint Set Animation</string>
+    <string name="a01">Relative Positioning</string>
+    <string name="a02">Margin Gone</string>
+    <string name="a03">Centering Views</string>
+    <string name="a04">Horizontal and Vertical Bias</string>
+    <string name="a05">Aligning Text to Baseline</string>
+    <string name="a06">Center Align Items to Each Other</string>
+    <string name="a07">Circular Positioning</string>
+    <string name="a08">Dimension Constraints</string>
+    <string name="a09">Horizontal and Vertical Guidelines</string>
+    <string name="a10">Match Constraints</string>
+    <string name="a11">Percent Dimensions</string>
+    <string name="a12">View Ratios</string>
+    <string name="a13">Chains</string>
+    <string name="a14">Groups</string>
+    <string name="a15">Barriers</string>
+    <string name="a16">Constraint Set Animation</string>
 
     <string name="constraint_set_animation_instructions">Press the Black Star</string>
     <string name="contents_instructions">Constraint Set Animation is the only one that needs to be run to see it in action.  The rest of the layouts can just be viewed in the xml editor with the \"Preview\" pane open.  Each numbered item below can be clicked to show the example.</string>

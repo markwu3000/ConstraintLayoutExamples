@@ -1,7 +1,6 @@
 package com.example.mwu3.constraintlayoutexamples
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,7 +33,6 @@ class A00_ConstraintLayoutExamplesContents : androidx.fragment.app.Fragment() {
         tv_a03.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.a03_Centering))
         tv_a04.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.a04_HorizontalVerticalBias))
         tv_a05.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.a05_AlignBaselineText))
-        tv_a06.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.a06_CenterAlignItemsToEachOther))
         tv_a07.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.a07_CircularPositioning))
         tv_a08.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.a08_DimensionConstraints))
         tv_a09.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.a09_HorizontalVerticalGuidelines))

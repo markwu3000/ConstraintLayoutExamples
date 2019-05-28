@@ -11,12 +11,121 @@
         style="@style/big_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/green"
+        android:background="@color/green800"
+        android:padding="@dimen/text_view_padding"
         android:text="@string/center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- To center one view (A) horizontally above another view (B), set the start of view A to the start of view B,
+         and the end of view A to the end of view B.  -->
+    <TextView
+        android:id="@+id/tv_above"
+        style="@style/small_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@color/blue800"
+        android:gravity="center"
+        android:padding="@dimen/text_view_padding"
+        android:text="@string/top"
+        app:layout_constraintBottom_toTopOf="@id/text_center"
+        app:layout_constraintEnd_toEndOf="@id/text_center"
+        app:layout_constraintStart_toStartOf="@id/text_center" />
+
+    <!-- To center one view (A) vertically to another view (B), set the top of view A to the top of view B,
+         and the bottom of view A to the bottom of view B.  -->
+
+    <TextView
+        android:id="@+id/tv_left"
+        style="@style/small_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/pink800"
+        android:gravity="center"
+        android:padding="@dimen/text_view_padding"
+        android:text="@string/left"
+        app:layout_constraintBottom_toBottomOf="@id/text_center"
+        app:layout_constraintEnd_toStartOf="@id/text_center"
+        app:layout_constraintTop_toTopOf="@id/text_center" />
+
+    <!-- Badge on bottom edge of view -->
+
+    <TextView
+        android:id="@+id/purple_view_1"
+        style="@style/small_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="@color/purple"
+        android:padding="@dimen/text_view_padding_large"
+        android:text="ABC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/purple_view_2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/plus_badge1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="@id/purple_view_1"
+        app:layout_constraintEnd_toEndOf="@id/purple_view_1"
+        app:layout_constraintStart_toStartOf="@id/purple_view_1"
+        app:layout_constraintTop_toBottomOf="@id/purple_view_1" />
+
+    <!-- Badge in corner of view -->
+
+    <TextView
+        android:id="@+id/purple_view_2"
+        style="@style/small_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="@color/purple"
+        android:padding="@dimen/text_view_padding_large"
+        android:text="ABC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/purple_view_1"
+        app:layout_constraintEnd_toStartOf="@id/purple_view_3"/>
+
+    <ImageView
+        android:id="@+id/plus_badge2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="@id/purple_view_2"
+        app:layout_constraintEnd_toEndOf="@id/purple_view_2" />
+
+    <!-- Badge on corner of view -->
+
+
+    <TextView
+        android:id="@+id/purple_view_3"
+        style="@style/small_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="@color/purple"
+        android:padding="@dimen/text_view_padding_large"
+        android:text="ABC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/purple_view_2" />
+
+    <ImageView
+        android:id="@+id/plus_badge3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="@id/purple_view_3"
+        app:layout_constraintEnd_toEndOf="@id/purple_view_3"
+        app:layout_constraintStart_toEndOf="@id/purple_view_3"
+        app:layout_constraintTop_toBottomOf="@id/purple_view_3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

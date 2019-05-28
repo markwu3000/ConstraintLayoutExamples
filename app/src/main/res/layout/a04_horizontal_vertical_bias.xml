@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- https://developer.android.com/reference/android/support/constraint/ConstraintLayout -->
-    <!-- Shift the component with Horizontal and Vertical Bias.  0 is left/up, 1 is right/down. 
-    app:layout_constraintHorizontal_bias=".734"
-    app:layout_constraintVertical_bias=".312"
+    <!-- https://developer.android.com/reference/android/support/constraint/ConstraintLayout
+
+         Shift the component with Horizontal and Vertical Bias.  0 is left/up, 1 is right/down.
+         app:layout_constraintHorizontal_bias=".734"
+         app:layout_constraintVertical_bias=".312"
     -->
 
     <TextView
@@ -15,13 +16,15 @@
         style="@style/big_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/blue"
-        android:text="@string/text1"
+        android:background="@color/blue800"
+        android:text="@string/bias_example"
+        android:padding="@dimen/text_view_padding"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".734"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias=".312" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

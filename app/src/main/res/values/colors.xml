@@ -4,12 +4,13 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="red">#ff0000</color>
+    <!-- https://htmlcolorcodes.com/color-chart/material-design-color-chart/ -->
+    <color name="pink800">#AD1457</color>
     <color name="orange">#ffa500</color>
-    <color name="yellow">#ffff00</color>
-    <color name="green">#00ff00</color>
-    <color name="blue">#0000ff</color>
-    <color name="purple">#ff00ff</color>
+    <color name="yellow">#FFF176</color>
+    <color name="green800">#2E7D32</color>
+    <color name="blue800">#1565C0</color>
+    <color name="purple">#7B1FA2</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     

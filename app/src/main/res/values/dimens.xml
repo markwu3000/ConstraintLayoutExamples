@@ -7,6 +7,9 @@
     <dimen name="big_left_margin">150dp</dimen>
     <dimen name="small_left_margin">25dp</dimen>
 
+    <dimen name="text_view_padding">15dp</dimen>
+    <dimen name="text_view_padding_large">30dp</dimen>
+
     <dimen name="top_margin">40dp</dimen>
     <dimen name="star_size_small">35dp</dimen>
 

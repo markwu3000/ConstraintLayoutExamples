@@ -1,281 +1,278 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <!-- A set of widgets are considered a chain if they are linked together via a bi-directional connection.
+             Chains are controlled by attributes set on the first element of the chain (the "head" of the chain). -->
 
-            <!-- A set of widgets are considered a chain if they are linked together via a bi-directional connection.
-                 Chains are controlled by attributes set on the first element of the chain (the "head" of the chain). -->
+        <!-- **** Spread Chain (default) ********************************************************** -->
 
-            <!-- **** Spread Chain (default) ********************************************************** -->
+        <TextView
+            android:id="@+id/chain_spread_text"
+            style="@style/big_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chain_spread"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/chain_spread_text"
-                style="@style/big_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/chain_spread"
-                android:textColor="@color/black"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <!-- This text view is the (horizontal) chain head... set the chainStyle here.
+             values: packed, spread, spread_inside
 
-            <!-- This text view is the (horizontal) chain head... set the chainStyle here.  
-                 values: packed, spread, spread_inside 
-                 
-                 If you don't set the "layout_constraintHorizontal_chainStyle", "spread" is the default. -->
-            <ImageView
-                android:id="@+id/text_1_1"
-                android:layout_width="@dimen/chain_square_size"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/pink"
-                android:src="@drawable/blossom"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/text_1_2"
-                app:layout_constraintTop_toBottomOf="@+id/chain_spread_text" />
+             If you don't set the "layout_constraintHorizontal_chainStyle", "spread" is the default. -->
+        <ImageView
+            android:id="@+id/text_1_1"
+            android:layout_width="@dimen/chain_square_size"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/pink"
+            android:src="@drawable/blossom"
+            app:layout_constraintEnd_toStartOf="@+id/text_1_2"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chain_spread_text" />
 
-            <ImageView
-                android:id="@+id/text_1_2"
-                android:layout_width="@dimen/chain_square_size"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/lightgreen"
-                android:src="@drawable/buttercup"
-                app:layout_constraintBottom_toBottomOf="@+id/text_1_1"
-                app:layout_constraintLeft_toRightOf="@+id/text_1_1"
-                app:layout_constraintRight_toLeftOf="@+id/text_1_3" />
+        <ImageView
+            android:id="@+id/text_1_2"
+            android:layout_width="@dimen/chain_square_size"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/lightgreen"
+            android:src="@drawable/buttercup"
+            app:layout_constraintBottom_toBottomOf="@+id/text_1_1"
+            app:layout_constraintEnd_toStartOf="@+id/text_1_3"
+            app:layout_constraintStart_toEndOf="@+id/text_1_1" />
 
-            <ImageView
-                android:id="@+id/text_1_3"
-                android:layout_width="@dimen/chain_square_size"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/lightblue"
-                android:src="@drawable/bubbles"
-                app:layout_constraintBottom_toBottomOf="@+id/text_1_1"
-                app:layout_constraintLeft_toRightOf="@+id/text_1_2"
-                app:layout_constraintRight_toRightOf="parent" />
+        <ImageView
+            android:id="@+id/text_1_3"
+            android:layout_width="@dimen/chain_square_size"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/lightblue"
+            android:src="@drawable/bubbles"
+            app:layout_constraintBottom_toBottomOf="@+id/text_1_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_1_2" />
 
-            <!-- ***** Spread Chain Inside ************************************************************ -->
+        <!-- ***** Spread Chain Inside ************************************************************ -->
 
-            <TextView
-                android:id="@+id/chain_spread_inside_text"
-                style="@style/big_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/top_margin"
-                android:text="@string/chain_spread_inside"
-                android:textColor="@color/black"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_1_1" />
+        <TextView
+            android:id="@+id/chain_spread_inside_text"
+            style="@style/big_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin"
+            android:text="@string/chain_spread_inside"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_1_1" />
 
-            <!-- This text view is the (horizontal) chain head... set the chainStyle here.  
-             values: packed, spread, spread_inside -->
-            <ImageView
-                android:id="@+id/text_2_1"
-                android:layout_width="@dimen/chain_square_size"
-                android:layout_height="@dimen/chain_square_size"
-                android:layout_marginLeft="30dp"
-                android:background="@color/pink"
-                android:src="@drawable/blossom"
-                app:layout_constraintHorizontal_chainStyle="spread_inside"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/text_2_2"
-                app:layout_constraintTop_toBottomOf="@+id/chain_spread_inside_text" />
+        <!-- This text view is the (horizontal) chain head... set the chainStyle here.
+         values: packed, spread, spread_inside -->
+        <ImageView
+            android:id="@+id/text_2_1"
+            android:layout_width="@dimen/chain_square_size"
+            android:layout_height="@dimen/chain_square_size"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:background="@color/pink"
+            android:src="@drawable/blossom"
+            app:layout_constraintEnd_toStartOf="@+id/text_2_2"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chain_spread_inside_text" />
 
-            <!-- The left edge of text_center is connected to the right edge of text_left -->
-            <ImageView
-                android:id="@+id/text_2_2"
-                android:layout_width="@dimen/chain_square_size"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/lightgreen"
-                android:src="@drawable/buttercup"
-                app:layout_constraintBottom_toBottomOf="@+id/text_2_1"
-                app:layout_constraintLeft_toRightOf="@+id/text_2_1"
-                app:layout_constraintRight_toLeftOf="@+id/text_2_3" />
+        <!-- The left edge of text_center is connected to the right edge of text_left -->
+        <ImageView
+            android:id="@+id/text_2_2"
+            android:layout_width="@dimen/chain_square_size"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/lightgreen"
+            android:src="@drawable/buttercup"
+            app:layout_constraintBottom_toBottomOf="@+id/text_2_1"
+            app:layout_constraintEnd_toStartOf="@+id/text_2_3"
+            app:layout_constraintStart_toEndOf="@+id/text_2_1" />
 
-            <!-- The left edge of text_right is connected to the right edge of text_center -->
-            <ImageView
-                android:id="@+id/text_2_3"
-                android:layout_width="@dimen/chain_square_size"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/lightblue"
-                android:src="@drawable/bubbles"
-                app:layout_constraintBottom_toBottomOf="@+id/text_2_1"
-                app:layout_constraintLeft_toRightOf="@+id/text_2_2"
-                app:layout_constraintRight_toLeftOf="@+id/text_2_4" />
+        <!-- The left edge of text_right is connected to the right edge of text_center -->
+        <ImageView
+            android:id="@+id/text_2_3"
+            android:layout_width="@dimen/chain_square_size"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/lightblue"
+            android:src="@drawable/bubbles"
+            app:layout_constraintBottom_toBottomOf="@+id/text_2_1"
+            app:layout_constraintEnd_toStartOf="@+id/text_2_4"
+            app:layout_constraintStart_toEndOf="@+id/text_2_2" />
 
-            <ImageView
-                android:id="@+id/text_2_4"
-                android:layout_width="@dimen/chain_square_size"
-                android:layout_height="@dimen/chain_square_size"
-                android:layout_marginRight="30dp"
-                android:background="@color/lightpurple"
-                android:src="@drawable/bliss"
+        <ImageView
+            android:id="@+id/text_2_4"
+            android:layout_width="@dimen/chain_square_size"
+            android:layout_height="@dimen/chain_square_size"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/lightpurple"
+            android:src="@drawable/bliss"
 
-                app:layout_constraintBottom_toBottomOf="@+id/text_2_1"
-                app:layout_constraintLeft_toRightOf="@+id/text_2_3"
-                app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@+id/text_2_1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_2_3" />
 
-            <!-- ***** Weighted Chain ***************************************************************** -->
+        <!-- ***** Weighted Chain ***************************************************************** -->
 
-            <TextView
-                android:id="@+id/chain_weighted_text"
-                style="@style/big_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/top_margin"
-                android:text="@string/weighted_chain"
-                android:textColor="@color/black"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_2_1" />
+        <TextView
+            android:id="@+id/chain_weighted_text"
+            style="@style/big_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin"
+            android:text="@string/weighted_chain"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_2_1" />
 
-            <!-- This text view is the (horizontal) chain head... set the chainStyle here.  
-             values: packed, spread, spread_inside -->
-            <ImageView
-                android:id="@+id/text_3_1"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/pink"
-                android:src="@drawable/blossom"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintHorizontal_weight="3"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/text_3_2"
-                app:layout_constraintTop_toBottomOf="@+id/chain_weighted_text" />
+        <!-- This text view is the (horizontal) chain head... set the chainStyle here.
+         values: packed, spread, spread_inside -->
+        <ImageView
+            android:id="@+id/text_3_1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/pink"
+            android:src="@drawable/blossom"
+            app:layout_constraintEnd_toStartOf="@+id/text_3_2"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chain_weighted_text" />
 
-            <!-- The left edge of text_center is connected to the right edge of text_left -->
-            <ImageView
-                android:id="@+id/text_3_2"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/lightgreen"
-                android:src="@drawable/buttercup"
-                app:layout_constraintBottom_toBottomOf="@+id/text_3_1"
-                app:layout_constraintHorizontal_weight="2"
-                app:layout_constraintLeft_toRightOf="@+id/text_3_1"
-                app:layout_constraintRight_toLeftOf="@+id/text_3_3" />
+        <!-- The left edge of text_center is connected to the right edge of text_left -->
+        <ImageView
+            android:id="@+id/text_3_2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/lightgreen"
+            android:src="@drawable/buttercup"
+            app:layout_constraintBottom_toBottomOf="@+id/text_3_1"
+            app:layout_constraintEnd_toStartOf="@+id/text_3_3"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toEndOf="@+id/text_3_1" />
 
-            <!-- The left edge of text_right is connected to the right edge of text_center -->
-            <ImageView
-                android:id="@+id/text_3_3"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/lightblue"
-                android:src="@drawable/bubbles"
-                app:layout_constraintBottom_toBottomOf="@+id/text_3_1"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintLeft_toRightOf="@+id/text_3_2"
-                app:layout_constraintRight_toRightOf="parent" />
+        <!-- The left edge of text_right is connected to the right edge of text_center -->
+        <ImageView
+            android:id="@+id/text_3_3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/lightblue"
+            android:src="@drawable/bubbles"
+            app:layout_constraintBottom_toBottomOf="@+id/text_3_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/text_3_2" />
 
-            <!-- ***** Packed Chain ******************************************************************* -->
+        <!-- ***** Packed Chain ******************************************************************* -->
 
-            <TextView
-                android:id="@+id/chain_packed"
-                style="@style/big_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/top_margin"
-                android:text="@string/packed_chain"
-                android:textColor="@color/black"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_3_1" />
+        <TextView
+            android:id="@+id/chain_packed"
+            style="@style/big_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin"
+            android:text="@string/packed_chain"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_3_1" />
 
-            <!-- This text view is the (horizontal) chain head... set the chainStyle here.  
-             values: packed, spread, spread_inside -->
-            <ImageView
-                android:id="@+id/text_4_1"
-                android:layout_width="@dimen/chain_square_size"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/pink"
-                android:src="@drawable/blossom"
-                app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/text_4_2"
-                app:layout_constraintTop_toBottomOf="@+id/chain_packed" />
+        <!-- This text view is the (horizontal) chain head... set the chainStyle here.
+         values: packed, spread, spread_inside -->
+        <ImageView
+            android:id="@+id/text_4_1"
+            android:layout_width="@dimen/chain_square_size"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/pink"
+            android:src="@drawable/blossom"
+            app:layout_constraintEnd_toStartOf="@+id/text_4_2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chain_packed" />
 
-            <!-- The left edge of text_center is connected to the right edge of text_left -->
-            <ImageView
-                android:id="@+id/text_4_2"
-                android:layout_width="@dimen/chain_square_size"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/lightgreen"
-                android:src="@drawable/buttercup"
-                app:layout_constraintBottom_toBottomOf="@+id/text_4_1"
-                app:layout_constraintLeft_toRightOf="@+id/text_4_1"
-                app:layout_constraintRight_toLeftOf="@+id/text_4_3" />
+        <!-- The left edge of text_center is connected to the right edge of text_left -->
+        <ImageView
+            android:id="@+id/text_4_2"
+            android:layout_width="@dimen/chain_square_size"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/lightgreen"
+            android:src="@drawable/buttercup"
+            app:layout_constraintBottom_toBottomOf="@+id/text_4_1"
+            app:layout_constraintEnd_toStartOf="@+id/text_4_3"
+            app:layout_constraintStart_toEndOf="@+id/text_4_1" />
 
-            <!-- The left edge of text_right is connected to the right edge of text_center -->
-            <ImageView
-                android:id="@+id/text_4_3"
-                android:layout_width="@dimen/chain_square_size"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/lightblue"
-                android:src="@drawable/bubbles"
-                app:layout_constraintBottom_toBottomOf="@+id/text_4_1"
-                app:layout_constraintLeft_toRightOf="@+id/text_4_2"
-                app:layout_constraintRight_toRightOf="parent" />
+        <!-- The left edge of text_right is connected to the right edge of text_center -->
+        <ImageView
+            android:id="@+id/text_4_3"
+            android:layout_width="@dimen/chain_square_size"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/lightblue"
+            android:src="@drawable/bubbles"
+            app:layout_constraintBottom_toBottomOf="@+id/text_4_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_4_2" />
 
-            <!-- ***** Packed Chain with Bias ********************************************************* -->
+        <!-- ***** Packed Chain with Bias ********************************************************* -->
 
-            <TextView
-                android:id="@+id/chain_packed_bias"
-                style="@style/big_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/top_margin"
-                android:text="@string/packed_chain_bias"
-                android:textColor="@color/black"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_4_1" />
+        <TextView
+            android:id="@+id/chain_packed_bias"
+            style="@style/big_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin"
+            android:text="@string/packed_chain_bias"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_4_1" />
 
-            <!-- Set the layout_constraintHorizontal_bias on the chain head. -->
-            <ImageView
-                android:id="@+id/text_5_1"
-                android:layout_width="@dimen/chain_square_size"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/pink"
-                android:src="@drawable/blossom"
-                app:layout_constraintHorizontal_bias=".234"
-                app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/text_5_2"
-                app:layout_constraintTop_toBottomOf="@+id/chain_packed_bias" />
+        <!-- Set the layout_constraintHorizontal_bias on the chain head. -->
+        <ImageView
+            android:id="@+id/text_5_1"
+            android:layout_width="@dimen/chain_square_size"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/pink"
+            android:src="@drawable/blossom"
+            app:layout_constraintEnd_toStartOf="@+id/text_5_2"
+            app:layout_constraintHorizontal_bias=".234"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chain_packed_bias" />
 
-            <!-- The left edge of text_center is connected to the right edge of text_left -->
-            <ImageView
-                android:id="@+id/text_5_2"
-                android:layout_width="@dimen/chain_square_size"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/lightgreen"
-                android:src="@drawable/buttercup"
-                app:layout_constraintBottom_toBottomOf="@+id/text_5_1"
-                app:layout_constraintLeft_toRightOf="@+id/text_5_1"
-                app:layout_constraintRight_toLeftOf="@+id/text_5_3" />
+        <!-- The left edge of text_center is connected to the right edge of text_left -->
+        <ImageView
+            android:id="@+id/text_5_2"
+            android:layout_width="@dimen/chain_square_size"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/lightgreen"
+            android:src="@drawable/buttercup"
+            app:layout_constraintBottom_toBottomOf="@+id/text_5_1"
+            app:layout_constraintEnd_toStartOf="@+id/text_5_3"
+            app:layout_constraintStart_toEndOf="@+id/text_5_1" />
 
-            <!-- The left edge of text_right is connected to the right edge of text_center -->
-            <ImageView
-                android:id="@+id/text_5_3"
-                android:layout_width="@dimen/chain_square_size"
-                android:layout_height="@dimen/chain_square_size"
-                android:background="@color/lightblue"
-                android:src="@drawable/bubbles"
-                app:layout_constraintBottom_toBottomOf="@+id/text_5_1"
-                app:layout_constraintLeft_toRightOf="@+id/text_5_2"
-                app:layout_constraintRight_toRightOf="parent" />
-            <!-- ************************************************************************************** -->
+        <!-- The left edge of text_right is connected to the right edge of text_center -->
+        <ImageView
+            android:id="@+id/text_5_3"
+            android:layout_width="@dimen/chain_square_size"
+            android:layout_height="@dimen/chain_square_size"
+            android:background="@color/lightblue"
+            android:src="@drawable/bubbles"
+            app:layout_constraintBottom_toBottomOf="@+id/text_5_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_5_2" />
+        <!-- ************************************************************************************** -->
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-</FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

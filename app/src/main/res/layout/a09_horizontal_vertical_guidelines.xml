@@ -4,9 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- https://developer.android.com/reference/android/support/constraint/Guideline -->
-    <!-- Guidelines are invisible horizontal or vertical lines that can be used as
-         constraint reference points. -->
+    <!-- https://developer.android.com/reference/android/support/constraint/Guideline
+         Guidelines are invisible horizontal or vertical lines that can be used as constraint reference points. -->
 
     <!-- Horizontal Guideline -->
     <androidx.constraintlayout.widget.Guideline
@@ -21,17 +20,19 @@
         style="@style/big_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/red"
+        android:background="@color/pink800"
         android:text="@string/top"
-        app:layout_constraintBottom_toTopOf="@id/horizontal_guideline" />
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guideline"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/text2"
         style="@style/big_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/blue"
+        android:background="@color/blue800"
         android:text="@string/bottom"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/horizontal_guideline" />
 
 
@@ -48,9 +49,10 @@
         style="@style/big_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/green"
+        android:background="@color/green800"
         android:text="@string/left"
-        app:layout_constraintRight_toLeftOf="@id/vertical_guideline" />
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text4"
@@ -59,6 +61,7 @@
         android:layout_height="wrap_content"
         android:background="@color/yellow"
         android:text="@string/right"
-        app:layout_constraintLeft_toRightOf="@id/vertical_guideline" />
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

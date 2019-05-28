@@ -4,27 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- align the text baseline of views with text with "layout_constraintBaseline_toBaselineOf" -->
+    <!-- align the text baseline of views with text with "layout_constraintBaseline_toBaselineOf"
+         It works with TextView, Buttons, and EditText. -->
 
     <TextView
         android:id="@+id/text_1"
         style="@style/tiny_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/red"
+        android:background="@color/pink800"
         android:text="@string/text1"
         app:layout_constraintBaseline_toBaselineOf="@id/text_2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/text_2" />
+        app:layout_constraintEnd_toStartOf="@id/text_2"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/text_2"
         style="@style/big_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/blue"
+        android:background="@color/blue800"
         android:text="@string/text2"
-        app:layout_constraintLeft_toRightOf="@id/text_1"
+        app:layout_constraintStart_toEndOf="@id/text_1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -33,16 +34,16 @@
         android:layout_height="wrap_content"
         android:src="@android:drawable/btn_star"
         android:text="@string/text3"
-        android:tint="@color/green"
+        android:tint="@color/green800"
         app:layout_constraintBaseline_toBaselineOf="@id/text_2"
-        app:layout_constraintLeft_toRightOf="@id/text_2" />
+        app:layout_constraintStart_toEndOf="@id/text_2" />
 
     <EditText
         android:id="@+id/edit_text"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         app:layout_constraintBaseline_toBaselineOf="@id/text_2"
-        app:layout_constraintLeft_toRightOf="@id/regular_button" />
+        app:layout_constraintStart_toEndOf="@id/regular_button" />
 
     <!-- layout_constraintBaseline_toBaselineOf does nothing for ImageButton.  Only works on things that have text -->
     <ImageButton
@@ -52,6 +53,6 @@
         android:src="@android:drawable/btn_star"
         android:tint="@color/yellow"
         app:layout_constraintBaseline_toBaselineOf="@id/text_2"
-        app:layout_constraintLeft_toRightOf="@id/edit_text" />
+        app:layout_constraintStart_toEndOf="@id/edit_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

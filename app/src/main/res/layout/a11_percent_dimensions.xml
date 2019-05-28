@@ -6,33 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Percents are new to 1.1 -->
     <!-- https://developer.android.com/reference/android/support/constraint/ConstraintLayout#DimensionConstraints
-    
-    Percent dimension
-    To use percent, you need to set the following:
 
+    Percents are new to 1.1
+    To use percent dimensions, you need to set the following:
     The dimension should be set to MATCH_CONSTRAINT (0dp)
-    The default should be set to percent app:layout_constraintWidth_default="percent" or app:layout_constraintHeight_default="percent"
-    (Note: this is necessary in 1.1-beta1 and 1.1-beta2, but will not be needed in following versions if the percent attribute is defined)
-    Then set the layout_constraintWidth_percent or layout_constraintHeight_percent attributes to a value between 0 and 1 
+
+    The percent support library was deprecated in API 26, Use ConstraintLayout
+    https://developer.android.com/reference/android/support/percent/PercentRelativeLayout.html
     -->
 
-    <!-- layout_width="0dp" (match constraint) with layout_constraintWidth_percent.
-         layout_height="0dp" with layout_constraintHeight_percent. 
-         
-         The percent fields take percentage based on the screen height and width, 
-         not remaining space. -->
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/blue"
+        android:background="@color/blue800"
         android:gravity="center"
         android:src="@android:drawable/star_on"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".3"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent=".7" />
 

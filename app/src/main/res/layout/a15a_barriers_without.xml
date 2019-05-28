@@ -5,22 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- New to 1.1, https://developer.android.com/reference/android/support/constraint/Barrier 
+    <!--
+        New to 1.1, https://developer.android.com/reference/android/support/constraint/Barrier
         A Barrier references multiple widgets as input, and creates a virtual guideline based on the 
         most extreme widget on the specified side. For example, a left barrier will align to the left 
-        of all the referenced views. -->
+        of all the referenced views.
 
-    <!-- This is an example of what happens if you don't use barriers.  It initially looks good... 
-         text_view_right_side is aligned to the longest text view (textView1) on the left.  
-         In the Design tab, change the language to Spanish or German (next to the Theme drop-down).  
-         The longest menu text is now "Settings" and the right side text overlaps it.  
-         Next, see a15b_barriers.xml -->
+        This example comes from https://constraintlayout.com/basics/barriers.html
+        and shows what happens when you don't use barriers.  It initially looks good...
+        text_view_right_side is aligned to the longest text view (textView1) on the left.
+        In the Design tab, change the language to Spanish or German (next to the Theme drop-down).
+        The longest menu text is now "Settings" and the right side text overlaps it.
+        Next, see a15b_barriers.xml -->
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/my_music"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/feed"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/profile"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/settings"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,12 +67,15 @@
         tools:text="@string/settings" />
 
     <TextView
+        style="@style/small_text"
         android:id="@+id/text_view_right_side"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:background="#DEADBEEF"
-        android:paddingLeft="16dp"
+        android:background="@color/blue800"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
         android:paddingTop="28dp"
         android:text="@string/random"
         app:layout_constraintEnd_toEndOf="parent"
