@@ -2,12 +2,12 @@ package com.example.mwu3.constraintlayoutexamples
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class A07_CircularPositioning : Fragment() {
+class A07_CircularPositioning : androidx.fragment.app.Fragment() {
     private var listener: OnFragmentInteractionListener? = null
     
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

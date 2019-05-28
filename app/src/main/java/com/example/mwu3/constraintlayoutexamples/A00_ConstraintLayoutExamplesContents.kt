@@ -1,7 +1,7 @@
 package com.example.mwu3.constraintlayoutexamples
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +11,7 @@ import com.jakewharton.rxbinding2.view.RxView
 import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.a00_contents_fragment.*
 
-class A00_ConstraintLayoutExamplesContents : Fragment() {
+class A00_ConstraintLayoutExamplesContents : androidx.fragment.app.Fragment() {
     private var compositeDisposable: CompositeDisposable = CompositeDisposable()
     
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

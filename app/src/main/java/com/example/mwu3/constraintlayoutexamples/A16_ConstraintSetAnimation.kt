@@ -2,15 +2,15 @@ package com.example.mwu3.constraintlayoutexamples
 
 import android.content.Context
 import android.os.Bundle
-import android.support.constraint.ConstraintSet
-import android.support.v4.app.Fragment
+import androidx.constraintlayout.widget.ConstraintSet
+import androidx.fragment.app.Fragment
 import android.transition.TransitionManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.a16a_animation_circular_before.*
 
-class A16_ConstraintSetAnimation : Fragment() {
+class A16_ConstraintSetAnimation : androidx.fragment.app.Fragment() {
     private var listener: OnFragmentInteractionListener? = null
     private var currentIndex: Int = 0
     private lateinit var listConstraintLayouts: MutableList<Int>
