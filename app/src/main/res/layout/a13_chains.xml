@@ -15,7 +15,7 @@
 
         <TextView
             android:id="@+id/chain_spread_text"
-            style="@style/big_text"
+            style="@style/chain_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/chain_spread"
@@ -60,7 +60,7 @@
 
         <TextView
             android:id="@+id/chain_spread_inside_text"
-            style="@style/big_text"
+            style="@style/chain_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/top_margin"
@@ -106,7 +106,7 @@
 
         <TextView
             android:id="@+id/chain_weighted_text"
-            style="@style/big_text"
+            style="@style/chain_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/top_margin"
@@ -155,7 +155,7 @@
 
         <TextView
             android:id="@+id/chain_packed"
-            style="@style/big_text"
+            style="@style/chain_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/top_margin"
@@ -201,7 +201,7 @@
 
         <TextView
             android:id="@+id/chain_packed_bias"
-            style="@style/big_text"
+            style="@style/chain_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/top_margin"

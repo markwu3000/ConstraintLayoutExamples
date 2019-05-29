@@ -27,6 +27,12 @@
     <style name="big_text" parent="white_on_black_shadow_text">
         <item name="android:textSize">@dimen/big_text</item>
     </style>
+
+    <style name="chain_text">
+        <item name="android:textSize">@dimen/big_text</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
     
     <style name="contents_item" parent="white_on_black_shadow_text">
         <item name="android:textSize">@dimen/medium_text</item>
