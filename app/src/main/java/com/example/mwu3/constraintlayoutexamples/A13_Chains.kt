@@ -21,7 +21,7 @@ class A13_Chains : androidx.fragment.app.Fragment() {
             listener = context
             listener?.onChildFragmentStart(resources.getString(R.string.a13))
         } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
+            throw RuntimeException("$context must implement OnFragmentInteractionListener")
         }
     }
 

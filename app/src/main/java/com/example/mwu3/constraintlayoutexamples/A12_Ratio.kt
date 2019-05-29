@@ -21,7 +21,7 @@ class A12_Ratio : androidx.fragment.app.Fragment() {
             listener = context
             listener?.onChildFragmentStart(resources.getString(R.string.a12))
         } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
+            throw RuntimeException("$context must implement OnFragmentInteractionListener")
         }
     }
 

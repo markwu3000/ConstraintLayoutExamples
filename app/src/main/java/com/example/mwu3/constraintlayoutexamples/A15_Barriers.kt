@@ -21,7 +21,7 @@ class A15_Barriers : androidx.fragment.app.Fragment() {
             listener = context
             listener?.onChildFragmentStart(resources.getString(R.string.a15))
         } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
+            throw RuntimeException("$context must implement OnFragmentInteractionListener")
         }
     }
 

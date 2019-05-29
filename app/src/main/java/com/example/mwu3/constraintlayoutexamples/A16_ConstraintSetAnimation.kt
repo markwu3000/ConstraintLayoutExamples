@@ -1,6 +1,7 @@
 package com.example.mwu3.constraintlayoutexamples
 
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.fragment.app.Fragment
@@ -25,7 +26,7 @@ class A16_ConstraintSetAnimation : androidx.fragment.app.Fragment() {
         listConstraintLayouts = ArrayList()
         listConstraintLayouts.add(R.layout.a16a_animation_circular_before)
         listConstraintLayouts.add(R.layout.a16b_animation_circular_after)
-        center_button.setOnClickListener({ addAnimationOperations() })
+        center_button.setOnClickListener { addAnimationOperations() }
     }
 
     private fun addAnimationOperations() {
@@ -34,8 +35,10 @@ class A16_ConstraintSetAnimation : androidx.fragment.app.Fragment() {
         if (currentIndex >= listConstraintLayouts.size) {
             currentIndex = 0
         }
-        constraintAfter.load(activity, listConstraintLayouts.get(currentIndex))
-        TransitionManager.beginDelayedTransition(root_level)
+        constraintAfter.load(activity, listConstraintLayouts[currentIndex])
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) { // Requires minAPI 19
+            TransitionManager.beginDelayedTransition(root_level)
+        }
         constraintAfter.applyTo(root_level)
     }
 
@@ -45,7 +48,7 @@ class A16_ConstraintSetAnimation : androidx.fragment.app.Fragment() {
             listener = context
             listener?.onChildFragmentStart(resources.getString(R.string.a16))
         } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
+            throw RuntimeException("$context must implement OnFragmentInteractionListener")
         }
     }
 
